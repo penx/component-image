@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "standard src/**/*.js"
+    "lint": "standard src/**/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corygibbons/component-image.git"
   },
-  "keywords": ["react", "component", "image"],
+  "keywords": [
+    "react",
+    "component",
+    "image"
+  ],
   "author": "Cory Gibbons",
   "license": "MIT",
   "bugs": {
@@ -22,7 +28,8 @@
     "nunjucks": "^3.0.1",
     "puppeteer": "^0.10.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "babel-jest": "^20.0.3",
@@ -35,5 +42,6 @@
   },
   "jest": {
     "collectCoverage": true
-  }
+  },
+  "snyk": true
 }
